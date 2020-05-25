@@ -13,14 +13,33 @@ body{
 }
 a{
     color: #1E1E1E;
+    text-transform: uppercase;
     text-decoration: none;
+    letter-spacing: 0.02em;
+    padding: 5px;
+    position: relative;
 }
+
+a:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #000;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+a:hover:after {
+  width: 100%;
+  left: 0;
+}
+
 a:link{
     color: #1E1E1E;
- }
-a:hover {
-    color: #DEDEDE;
-    text-decoration: underline;
 }
 
 a:visited {
