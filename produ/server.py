@@ -2,6 +2,8 @@
 
 
 from flask import Flask, request, render_template
+from flask import Flask, session
+
 
 app = Flask(__name__)
 
@@ -126,7 +128,7 @@ def processHome():
            '</html>'
 
 
-# app.secret_key = 'A0Zr98j/3yX R~XHH!jmN]LWX/,?RT'
+app.secret_key = 'A0Zr98j/3yX R~XHH!jmN]LWX/,?RT'
 # start the server with the 'run()' method
 if __name__ == '__main__':
     app.run(debug=True, port=8001)
