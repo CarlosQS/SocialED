@@ -42,8 +42,10 @@
             <label for="Friends">
                 Amiguetes (Pulsa Ctrl (windows) / Command (Mac) para selección multiple)
             </label>
-            <div class="inputs">
-                <select name="friends" size="5" multiple>
+            <div class="inputs" style="padding: 10px 0">
+
+                <select name="friends">
+                    <option value="null" selected>Selecciona un amigo</option>
                     {% for option in all_users %}
                     <option value="{{ option }} " {% if option in friends %} selected {% endif %}>{{ option }} </option>
                     {% endfor %}
